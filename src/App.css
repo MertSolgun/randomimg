@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
+body {
+  background-color: cornsilk;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.kursBtn {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 10px auto;
+  border-radius: 5px;
+  padding: 5px 30px;
+  background-color: blue;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.courseList {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  margin: auto;
+  justify-content: center;
+  column-gap: 1rem;
+  row-gap: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.courseList img {
+  width: 400px !important;
+  height: 400px;
+  object-fit: cover;
+  border: 5px solid rgb(176, 175, 175);
+  border-radius: 10px;
+}
+
+@media (max-width: 1300px) {
+  .courseList {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    margin: auto;
+    justify-content: center;
+    column-gap: 1rem;
+    row-gap: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+  .courseList img {
+    width: 300px !important;
+    height: 300px;
+    object-fit: cover;
+    border: 5px solid rgb(176, 175, 175);
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  .courseList {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    margin: auto;
+    justify-content: center;
+    column-gap: 1rem;
+    row-gap: 1rem;
+  }
+  .courseList img {
+    width: 300px !important;
+    height: 300px;
+    object-fit: cover;
+    border: 5px solid rgb(176, 175, 175);
+    border-radius: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .courseList {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    margin: auto;
+    justify-content: center;
+    column-gap: 1rem;
+    row-gap: 1rem;
+  }
+  .courseList img {
+    width: 100%;
+    object-fit: cover;
+    border: 5px solid rgb(176, 175, 175);
+    border-radius: 10px;
   }
 }
